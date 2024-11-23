@@ -16,4 +16,5 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print pushed tag
-        run: echo "Pushed tag: ${{ github.ref_name }}"
+        run: |
+          echo "Pushed tag: ${{ github.ref_name }}"
