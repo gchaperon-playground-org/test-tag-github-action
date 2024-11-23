@@ -3,7 +3,7 @@ name: Print Tag on Push to Master
 on:
   push:
     tags:
-      - "*" # Trigger for any tag
+      - "**" # Trigger for any tag
 
 jobs:
   print_tag:
