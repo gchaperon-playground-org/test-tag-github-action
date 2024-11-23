@@ -1,0 +1,19 @@
+name: Print Tag on Push to Master
+
+on:
+  push:
+    tags:
+      - "*" # Trigger for any tag
+    branches:
+      - master # Trigger only on the master branch
+
+jobs:
+  print_tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Print pushed tag
+        run: echo "Pushed tag: ${{ github.ref_name }}"
