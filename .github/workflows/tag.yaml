@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - "*" # Trigger for any tag
-    branches:
-      - master # Trigger only on the master branch
 
 jobs:
   print_tag:
